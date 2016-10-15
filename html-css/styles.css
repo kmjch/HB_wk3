@@ -1,0 +1,23 @@
+/* Your CSS goes here */
+
+input {
+    background-color: #FFFFCC;
+    border: 0.5px solid yellow;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    border: 1px black;
+}
+
+input[name="lastname"] {
+    font-weight: bold;
+}
+
+div[id="instructions"] {
+    border: 1px solid black;
+}
