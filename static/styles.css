@@ -1,0 +1,32 @@
+/* Your CSS goes here */
+
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    border: 1px black;
+}
+
+input[name="lastname"] {
+    font-weight: bold;
+}
+
+div[id="instructions"] {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+input {
+    background-color: #FFFFCC;
+    border: 0.3px solid gray;
+    border-radius: 4px;
+}
+
+div, th, td, table {
+    padding: 10px;
+}
