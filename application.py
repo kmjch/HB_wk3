@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_debugtoolbar import DebugToolbarExtension
 
 
@@ -11,13 +11,23 @@ app.secret_key = "ABC"
 @app.route("/")
 def index_page():
     """Show an index page."""
+    return render_template("index.html")
 
-    return "<html><body>This is the homepage.</body></html>"
+@app.route("/application")
+def application():
+    """Show an application form."""
+    return render_template("application-form.html")
 
-    # Alternately, we could make this a Jinja template in `templates/`
-    # and return that result of rendering this, like:
-    #
-    # return render_template("index.html")
+@app.route('/thanks')
+def show_thanks():
+    """Thanks the applicant."""
+    firstname = request.args.get("firstname")
+    lastname = request.args.get("lastname")
+    salaryreq = request.args.get("salaryreq")
+    choosejob = request.args.get("choosejob")
+
+    return render_template("thanks.html", firstname=firstname, lastname=lastname,
+                           salaryreq=salaryreq, choosejob=choosejob)
 
 
 if __name__ == "__main__":
@@ -29,4 +39,3 @@ if __name__ == "__main__":
     DebugToolbarExtension(app)
 
     app.run(host="0.0.0.0")
-

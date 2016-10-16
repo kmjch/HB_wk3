@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}Thanks!{% endblock %}
+
+{% block body %}
+    <h1>Application submitted successfully.</h1>
+    Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ choosejob }}. Your  minimum salary requirement is ${{ salaryreq }}.
+{% endblock %}

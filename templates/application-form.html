@@ -1,20 +1,16 @@
-<!doctype html>
-<html>
-<head>
-    <title>Skills-HTML-CSS</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../static/styles.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
 <!-- heading -->
+{% block title %}Apply{% endblock %}
+
+{% block body %}
+
 <h1>Apply to Ubermelon</h1>
 
 <div id="instructions"><p>We'd love for you to join us at Ubermelon!  We'll connect with you within a week of your form submission.</p></div>
 
 <!-- form -->
-<form action="/application" method="POST">
+<form action="/thanks">
     <table>
         <tr>
             <td><label for "fname">First name:</label></td>
@@ -33,19 +29,18 @@
             <td>
                 <select id="job" name="choosejob" required>
                     <option disabled selected value>--select an option--</option>
-                    <option value="software">Software Engineer</option>
-                    <option value="qa">QA Engineer</option>
-                    <option value="product">Product Manager</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="QA Engineer">QA Engineer</option>
+                    <option value="Product Manager">Product Manager</option>
                 </select>
             </td>
         </tr>
         <tr>
             <td>
-                <input class="btn btn-default" type="submit" value="Submit">
+                <input type="submit" value="submit">
             </td>
         </tr>
     </table>
 </form>
 
-</body>
-</html>
+{% endblock %}

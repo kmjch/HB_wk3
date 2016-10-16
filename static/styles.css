@@ -5,11 +5,13 @@ h1 {
     font-family: 'Roboto Condensed', sans-serif;
     padding: 10px;
     padding-bottom: 15px;
+    font-weight: bold;
 }
 
 p {
     font-family: 'Lato', sans-serif;
     border: 1px black;
+    margin: 10px;
 }
 
 input[name="lastname"] {
